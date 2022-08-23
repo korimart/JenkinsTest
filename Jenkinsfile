@@ -3,10 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                retry(3) {
-                    sh 'python --version'
-                }
-                
+                input "OK?"
                 sh 'echo hi'
             }
             post {
